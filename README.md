@@ -2,17 +2,16 @@
 ## O que é?
 Criei este repositório para que developers tenham uma base de aplicação em _**[node.js](https://nodejs.org/en/)**_ e _**[TypeScript](https://www.typescriptlang.org/)**_ no desenvolvimento de sistemas no [WhatsApp](https://www.whatsapp.com/?lang=pt_br), como bots 🤖, automação, sistemas de restaurantes, etc...
 ## Como usar?
-> Para começar, você tem de clonar o repositório, abaixo tem um passo a passo por meio do terminal
+> Para começar, você tem de clonar o repositório, abaixo tem um passo a passo por meio do terminal (**Preferencialmente usar PowerShell**)
 ```cmd
 cd desktop
-mkdir nodezap
-cd nodezap
-git clone https://github.com/cleiton2040/node-whatsapp/
+git clone https://github.com/cleiton2040/nodezap.ts/
+cd nodezap.ts
 npm i
 ```
 Feito isso, você irá adaptar como você vai rodar o código em TypeScript, eu uso um método um pouco lento (`tsc` >> `node .`), então fica livre a você escolher o seu e começar a desenvolver
 ## Eventos
-Como toda boa aplicação em node.js, vamos aproveitar que o node é orientado a eventos, mas nesta aplicação funciona um pouco diferente, ao invés de espalhar um monte `client.on` em todo o código, todos os eventos são organizados e localizados na pasta `src/events`, sendo um arquivo para cada evento, e todos seguem um padrão de exportação que _deve_ ser seguido, descrito abaixo
+Como toda boa aplicação em node.js, vamos aproveitar que o node é orientado a eventos, mas nesta aplicação funciona um pouco diferente, ao invés de espalhar um monte `client.on` em todo o código, todos os eventos são organizados e localizados na pasta `src/events`, sendo um arquivo para cada evento, e todos respeitam um padrão de exportação que _deve_ ser seguido, descrito abaixo
 
 ```ts
 interface events {

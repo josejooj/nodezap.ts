@@ -10,3 +10,9 @@ export {
     client,
     sessionPath
 }
+
+/**
+ * Arquivo responsável por instanciar a classe Client, e
+ * restaurar a sessão antiga, sem ter que botar o qrcode novamente,
+ * sempre que precisar usar a constante client, basta importar
+ */

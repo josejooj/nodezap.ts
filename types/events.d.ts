@@ -1,6 +1,7 @@
-import { Client } from "whatsapp-web.js";
+import WAWebJS from "whatsapp-web.js";
 
 export default interface events {
-    func: (client: Client, ...any) => Promise<unknown>
+    run: (client: WAWebJS.Client, ...any) => Promise<unknown>
     eventName: string
-}
+    once?: boolean
+} as 

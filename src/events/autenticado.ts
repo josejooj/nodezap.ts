@@ -1,15 +1,13 @@
-import { Client, ClientSession } from "whatsapp-web.js";
 import events from "../../types/events";
-import { sessionPath } from '../sessionManager';
-import { writeFileSync } from 'fs'
 
 const obj: events = {
-    run: async (client: Client, session: ClientSession) => {
-        writeFileSync(sessionPath, JSON.stringify(session));
+    run: async (client) => {
+        console.log(`Agora você está autenticado ao whatsapp-web.js`.format({ tag: 'INFO', color: 'verde' }))
     },
-    eventName: "authenticated",
-    once: true,
+    eventName: "authenticated"
 }
+
+export default obj;
 
 /**
  * Evento que é disparado quando você está autenticado em uma

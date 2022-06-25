@@ -1,14 +1,15 @@
 import { Client } from "whatsapp-web.js";
-import events from "../../types/events"; //@ts-ignore
-import { generate } from 'qrcode-terminal';
+import events from "../../types/events";
+import qrcode from 'qrcode-terminal';
 
 const obj: events = {
     run: async (client: Client, qr: string) => {
-        generate(qr, { small: true })
+        qrcode.generate(qr, { small: true });
     },
     eventName: 'qr',
-    once: true
 }
+
+export default obj;
 
 /**
  * Evento responsável por gerar o QR-CODE no terminal

@@ -3,10 +3,9 @@ import events from "../../types/events";
 
 const obj: events = {
     run: async (client: Client) => {
-        console.log("Estou online e pronto para ação")
+        console.log("Estou online e pronto para ação".format({ tag: 'INFO', color: 'verde'}))
     },
     eventName: "ready",
-    once: true,
 }
 
 export default obj

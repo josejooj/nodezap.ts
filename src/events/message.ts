@@ -1,14 +1,14 @@
-import { Client, Message } from "whatsapp-web.js";
+import { Message } from "whatsapp-web.js";
 import events from "../../types/events";
 
 const obj: events = {
-    run: async (client: Client, message: Message) => {
-        console.log(`[${message.from}] - ${message.body}`)
+    run: async (client, message: Message) => {
+        console.log(`${message.body}`.format({ tag: message.from, color: 'verde' }))
     },
     eventName: "message",
-    once: false,
 }
 
+export default obj;
 
 /**
  * Evento que é disparado quando uma mensagem é
